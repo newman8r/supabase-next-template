@@ -8,6 +8,8 @@ const nextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/' : '',
+  basePath: '',
 }
 
 module.exports = nextConfig 

@@ -5,7 +5,6 @@ applications:
         preBuild:
           commands:
             - npm ci
-            - npm install -g npm@latest
         build:
           commands:
             - echo "Building with Next.js static export"
@@ -15,9 +14,10 @@ applications:
         baseDirectory: out
         files:
           - '**/*'
-        discard-paths: no
+          - '*'
+        discard-paths: false
       cache:
         paths:
           - node_modules/**/*
           - .next/cache/**/*
-    appRoot: frontend 
+    appRoot: . 
