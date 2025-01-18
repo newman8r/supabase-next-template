@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Linux\",\"createdBy\":\"Amplify\",\"createdWith\":\"11.0.0-beta.8\",\"stackType\":\"hosting-amplifyhosting\",\"metadata\":{}}",
+  "Description": "Branch stack creation for AWS Amplify Console",
   "Parameters": {
     "env": {
       "Type": "String"
@@ -32,7 +32,20 @@
         },
         "AppId": {
           "Ref": "appId"
-        }
+        },
+        "EnableAutoBuild": true,
+        "CustomRules": [
+          {
+            "Source": "/<*>",
+            "Target": "/index.html",
+            "Status": "200"
+          },
+          {
+            "Source": "/static/<*>",
+            "Target": "/static/<*>",
+            "Status": "200"
+          }
+        ]
       }
     }
   }
