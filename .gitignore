@@ -48,3 +48,6 @@ yarn-error.log*
 
 # node_modules
 **/node_modules
+
+# Sensitive files
+frontend/scripts/set-amplify-env.sh
