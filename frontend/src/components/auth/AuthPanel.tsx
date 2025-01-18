@@ -3,6 +3,10 @@
 import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
 
+interface AuthError {
+  message: string
+}
+
 export default function AuthPanel() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -29,8 +33,9 @@ export default function AuthPanel() {
         })
         if (error) throw error
       }
-    } catch (err: any) {
-      setError(err.message)
+    } catch (err) {
+      const authError = err as AuthError
+      setError(authError.message)
     } finally {
       setLoading(false)
     }

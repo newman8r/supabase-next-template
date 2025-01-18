@@ -5,10 +5,17 @@ import { supabase } from '@/lib/supabase'
 import AuthPanel from '@/components/auth/AuthPanel'
 import { useUser } from '@/contexts/UserContext'
 
+interface User {
+  id: string
+  email: string
+  created_at: string
+  updated_at: string
+}
+
 export default function Home() {
   const { user, loading: userLoading } = useUser()
   const [isConnected, setIsConnected] = useState<boolean | null>(null)
-  const [users, setUsers] = useState<any[]>([])
+  const [users, setUsers] = useState<User[]>([])
 
   useEffect(() => {
     async function checkConnection() {
