@@ -24,21 +24,30 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold mb-8">Supabase + Next.js Demo</h1>
-      <div className="text-xl mb-4">
-        Connection Status: {' '}
-        {isConnected === null ? (
-          'Checking...'
-        ) : isConnected ? (
-          <span className="text-green-500">Connected</span>
-        ) : (
-          <span className="text-red-500">Not Connected</span>
-        )}
+    <div className="min-h-screen bg-gradient-to-b from-[#E0F2F7] via-[#4A90E2]/10 to-[#F7F3E3] p-6">
+      <div className="max-w-md mx-auto bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-6 border border-[#E0F2F7]/20">
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-[#2C5282]">
+          ZenBreeze AI Tool
+        </h1>
+        <div className="flex flex-col items-center gap-4">
+          <div className="text-xl text-center">
+            Connection Status: {' '}
+            {isConnected === null ? (
+              'Checking...'
+            ) : isConnected ? (
+              <span className="text-[#FF7676] font-semibold">Connected</span>
+            ) : (
+              <span className="text-red-500">Not Connected</span>
+            )}
+          </div>
+          <div className="text-lg text-[#4A90E2]">
+            Users in database: {users.length}
+          </div>
+          <button className="px-6 py-3 bg-[#4A90E2] text-white rounded-full hover:bg-[#2C5282] transition-colors duration-300 mt-4">
+            Get Started
+          </button>
+        </div>
       </div>
-      <div className="text-lg">
-        Users in database: {users.length}
-      </div>
-    </main>
+    </div>
   )
 } 
