@@ -51,3 +51,11 @@ yarn-error.log*
 
 # Sensitive files
 frontend/scripts/set-amplify-env.sh
+
+# Environment files
+.env.local
+.env.development
+.env.production
+frontend/.env.local
+frontend/.env.development
+frontend/.env.production
