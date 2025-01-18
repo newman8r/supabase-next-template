@@ -1,4 +1,5 @@
 import './globals.css'
+import { UserProvider } from '@/contexts/UserContext'
 
 export const metadata = {
   title: 'Ocean Breeze Demo',
@@ -12,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <UserProvider>
+          {children}
+        </UserProvider>
+      </body>
     </html>
   )
 }
