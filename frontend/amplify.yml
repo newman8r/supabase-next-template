@@ -8,14 +8,16 @@ applications:
             - npm install -g npm@latest
         build:
           commands:
+            - echo "Building with Next.js static export"
             - env | grep -e NEXT_PUBLIC_ >> .env.production
             - npm run build
       artifacts:
         baseDirectory: out
         files:
           - '**/*'
+        discard-paths: no
       cache:
         paths:
           - node_modules/**/*
           - .next/cache/**/*
-    appRoot: . 
+    appRoot: frontend 

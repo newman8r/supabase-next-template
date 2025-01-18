@@ -5,10 +5,9 @@ const nextConfig = {
     unoptimized: true,
   },
   distDir: '.next',
-  experimental: {
-    appDir: true,
-  },
   trailingSlash: true,
+  reactStrictMode: true,
+  swcMinify: true,
 }
 
 module.exports = nextConfig 
