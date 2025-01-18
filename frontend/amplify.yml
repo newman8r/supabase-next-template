@@ -14,10 +14,18 @@ applications:
         baseDirectory: out
         files:
           - '**/*'
-          - '*'
         discard-paths: false
       cache:
         paths:
           - node_modules/**/*
           - .next/cache/**/*
+      customHeaders:
+        - pattern: '**/*'
+          headers:
+            - key: 'Cache-Control'
+              value: 'public, max-age=0, must-revalidate'
+      rewrites:
+        - source: '</^[^.]+$|\\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/'
+          target: '/index.html'
+          status: '200'
     appRoot: . 
