@@ -19,10 +19,11 @@ A modern web application built with Next.js and Supabase, featuring user authent
 
 ## Getting Started
 
-1. Clone the repository:
+1. Clone the repository and switch to the main branch:
 ```bash
 git clone https://github.com/newman8r/c-breeze.git
 cd c-breeze
+git checkout main
 ```
 
 2. Install dependencies:
