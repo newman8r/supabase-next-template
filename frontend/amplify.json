@@ -1,0 +1,15 @@
+{
+  "features": {
+    "project": {
+      "region": "us-west-1",
+      "projectName": "zenbreeze",
+      "appId": "zenbreeze"
+    }
+  },
+  "profiles": {
+    "default": {
+      "useProfile": true,
+      "profileName": "gauntlet"
+    }
+  }
+} 
