@@ -16,8 +16,8 @@ export default {
         },
         sand: {
           light: '#F7F3E3',  // Light sand
-          DEFAULT: '#E6D5AC', // Medium sand
-          dark: '#D4C391',   // Dark sand
+          DEFAULT: '#E5D9B6', // Medium sand
+          dark: '#A4BE7B',   // Dark sand
         },
         coral: {
           light: '#FFE5E5',  // Light coral

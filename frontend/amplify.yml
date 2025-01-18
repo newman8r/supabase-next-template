@@ -5,6 +5,7 @@ applications:
         preBuild:
           commands:
             - npm ci
+            - npm install -g npm@latest
         build:
           commands:
             - env | grep -e NEXT_PUBLIC_ >> .env.production
@@ -17,4 +18,4 @@ applications:
         paths:
           - node_modules/**/*
           - .next/cache/**/*
-    appRoot: frontend 
+    appRoot: . 
