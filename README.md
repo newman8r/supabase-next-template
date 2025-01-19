@@ -1,4 +1,4 @@
-# ZenBreeze AI Tool
+# Supabase + Next.js + amplify template
 
 A modern web application built with Next.js and Supabase, featuring user authentication and a clean, ocean-themed design.
 
